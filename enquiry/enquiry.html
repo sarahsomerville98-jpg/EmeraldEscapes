@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Enquiry</title>
+		<link rel="stylesheet" href="../style/style.css"/>
+		<script src="../JavaScript/enquiry.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<a href="../index.html">
+				<img src="../images/logo.png" alt="Emerald Escapes Logo" class="logo"/>
+			</a>
+            <nav class="banner">
+				<a href="../index.html">Home</a>
+                <a href="../experiences/experiences.html">Experiences</a>
+                <a href="enquiry.html">Contact and Booking Enquiry</a>
+            </nav>
+        </header>
+		<main class="enquiry">
+			<section class="page-banner">
+				<h1>Contact and Booking Enquiry</h1>
+			</section>
+			<section class="intro">
+				<p>Have a question or need help planning your Irish getaway? Get in touch with our team and we'll make your next adventure unforgettable.</p> <!--Text generated using ChatGPT. Prompt: Currently above my contact form I have the text "If you are interested in embarking on an amazing Ireland adventure, please contact us." , I don't feel like this is great, coudl you give me a different line of text to put there? 04/11/2026-->
+				<hr class="divider"> <!--code reference: https://www.w3schools.com/tags/tag_hr.asp-->
+			</section>
+			<section class="form">
+				<h2>Contact Us</h2>
+				<p>Complete the form below. All fields are required.</p>
+					<form id="contactForm" novalidate>
+					
+						<label for="fullName">Full Name</label>
+						<input type="text" id="fullName" name="fullName" autocomplete="name" required />
+						<p id="nameError" class="error"></p> <!--code reference: https://www.w3schools.com/js/js_project_form_validation.asp-->
+					
+						<label for="email">Email Address</label>
+						<input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email" required />
+						<p id="emailError" class="error"></p>
+					
+						<label for="phone">Phone Number</label>
+						<input type="tel" id="phone" name="phone" placeholder="+353123456789" autocomplete="tel" required />
+						<p id="phoneError" class="error"></p>
+						
+						<label for="dropdown">Enquiry Type</label>
+						<select id="dropdown" name="dropdown" required>
+							<option value="">Please Choose</option>
+							<option value="booking">Booking Enquiry</option>
+							<option value="payment">Payment Enquiry</option>
+							<option value="info">General Information</option>
+							<option value="other">Other</option>
+						</select>
+						<p id="dropdownError" class="error"></p>
+						
+						<label for="message">Message</label>
+						<textarea id="message" name="message" rows="5" placeholder="Please enter the details of your enquiry here" required></textarea>
+						<p id="messageError" class="error"></p>
+						
+						<button class="button" id="submit" type="submit">Submit</button>
+					</form>
+					<p id="result"></p>
+			</section>
+		</main>
+	</body>
+</html>
